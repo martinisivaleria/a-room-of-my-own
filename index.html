@@ -106,14 +106,19 @@
       
   
 <style>
-  footer.u-footer {
+ footer.u-footer {
     width: 100%;
-    padding: 10px 0;               /* barra sottile */
+    padding: 0;               /* puoi lasciare questo o aumentarlo se serve più spazio */
     min-height: auto;
     background-color: #333;         /* grigio scuro */
     text-align: center;
     box-sizing: border-box;
-  }
+
+    /* centratura verticale con Flexbox */
+    display: flex;
+    justify-content: center; /* centra orizzontalmente */
+    align-items: center;     /* centra verticalmente */
+}
 
 	
   footer.u-footer p {
@@ -215,6 +220,7 @@
       </div></footer>
   
 </body></html>
+
 
 
 
