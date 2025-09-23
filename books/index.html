@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<html lang="it" style="font-size: 16px;">
+<html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <title>Books</title>
-
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #C59090; /* sfondo nero */
+      background-color: #C59090; /* sfondo */
       color: #512222;
       font-family: 'Lora', serif;
       line-height: 1.6;
@@ -30,27 +26,71 @@
     p.description {
       text-align: center;
       max-width: 700px;
-      margin: 0 auto 40px auto;
+      margin: 0 auto 50px auto;
       font-size: 1.1rem;
+      color: #512222;
     }
 
-    ul {
-      list-style: none; /* tolgo i pallini classici */
-      padding: 0;
-      max-width: 600px;
-      margin: 0 auto;
+    /* Container griglia */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
     }
 
-    ul li {
+    /* Singola card */
+    .card {
+      position: relative;
+      width: 220px;
+      height: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    /* Titolo visibile */
+    .card-title {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(81,34,34,0.7); /* riprende il #512222 */
+      padding: 6px 14px;
+      border-radius: 10px;
+    }
+
+    /* Overlay nascosto */
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(81,34,34,0.9); /* overlay con colore principale */
+      color: #fff;
+      font-size: 0.95rem;
       display: flex;
       align-items: center;
-      margin: 15px 0;
-      font-size: 1.1rem;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s;
     }
 
-    ul li span.icon {
-      font-size: 1.5rem;
-      margin-right: 12px;
+    .card:hover .card-overlay {
+      opacity: 1;
     }
   </style>
 </head>
@@ -59,16 +99,30 @@
   <h1>Books</h1>
 
   <p class="description">
-   Here’s a list of some of the books I’ve read over the past few years. For my favorites, I’ve also added a brief comment. If you love reading and would like to discuss what you’ve read, feel free to reach out to me. I always enjoy sharing thoughts and exchanging opinions about literature.
+    Here’s a list of some of the books I’ve read over the past few years. For my favorites, I’ve also added a brief comment.  
+    If you love reading and would like to discuss what you’ve read, feel free to reach out to me.  
+    I always enjoy sharing thoughts and exchanging opinions about literature.
   </p>
 
-  <ul>
-    <li><span class="icon">📖</span> Prima riga dell’elenco</li>
-    <li><span class="icon">📖</span> Seconda riga dell’elenco</li>
-    <li><span class="icon">📖</span> Terza riga dell’elenco</li>
-    <li><span class="icon">📖</span> Quarta riga dell’elenco</li>
-    <li><span class="icon">📖</span> Quinta riga dell’elenco</li>
-  </ul>
+  <div class="cards">
+    <!-- Card 1 senza commento -->
+    <div class="card" style="background-image: url('https://picsum.photos/300/400?1');">
+      <div class="card-title">Book One</div>
+      <div class="card-overlay"></div>
+    </div>
+
+    <!-- Card 2 con commento -->
+    <div class="card" style="background-image: url('https://picsum.photos/300/400?2');">
+      <div class="card-title">Book Two</div>
+      <div class="card-overlay">I really enjoyed this book — beautiful writing and a deep story.</div>
+    </div>
+
+    <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('https://picsum.photos/300/400?3');">
+      <div class="card-title">Book Three</div>
+      <div class="card-overlay">One of my all-time favorites. Highly recommended!</div>
+    </div>
+  </div>
 
 </body>
 </html>
