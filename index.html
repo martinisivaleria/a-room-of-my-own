@@ -108,25 +108,30 @@
 <style>
  footer.u-footer {
     width: 100%;
-    padding: 0;               /* puoi lasciare questo o aumentarlo se serve più spazio */
-    min-height: auto;
-    background-color: #333;         /* grigio scuro */
-    text-align: center;
+    background-color: #333;
     box-sizing: border-box;
 
-    /* centratura verticale con Flexbox */
     display: flex;
     justify-content: center; /* centra orizzontalmente */
     align-items: center;     /* centra verticalmente */
+    min-height: 60px;        /* altezza minima, puoi cambiare */
+    padding: 0;              /* rimuove padding che sposta il testo */
 }
 
-	
-  footer.u-footer p {
-    margin: 0;
-    color: #ffffff;/* testo bianco */
+footer.u-footer .u-sheet-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;              /* rimuove padding interno */
+}
+
+footer.u-footer p {
+    margin: 0;               /* rimuove margini che spingono il testo */
+    color: #fff;
     font-family: 'Lora', serif;
     font-size: 0.9rem;
-  }
+}
 </style>
 		
 
@@ -220,6 +225,7 @@
       </div></footer>
   
 </body></html>
+
 
 
 
