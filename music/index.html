@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Links</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #C59090;
+      color: #512222;
+      font-family: 'Lora', serif;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #512222;
+    }
+
+    p.description {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+      font-size: 1.1rem;
+      color: #512222;
+    }
+
+    /* Lista di link */
+    ul.video-list {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    ul.video-list li {
+      margin: 15px 0;
+      font-size: 1.1rem;
+    }
+
+    ul.video-list li a {
+      text-decoration: none;
+      color: #fff; /* colore del link */
+      background-color: rgba(81,34,34,0.7); /* rettangolo dietro link */
+      padding: 8px 12px;
+      border-radius: 8px;
+      display: inline-block;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    ul.video-list li a:hover {
+      background-color: rgba(81,34,34,0.9);
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Favorite Videos</h1>
+
+  <p class="description">
+    Here’s a collection of some of my favorite videos. Click on any link to watch on YouTube.
+  </p>
+
+  <ul class="video-list">
+    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Video One</a></li>
+    <li><a href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ" target="_blank">Video Two</a></li>
+    <li><a href="https://www.youtube.com/watch?v=L_jWHffIx5E" target="_blank">Video Three</a></li>
+    <li><a href="https://www.youtube.com/watch?v=fLexgOxsZu0" target="_blank">Video Four</a></li>
+    <li><a href="https://www.youtube.com/watch?v=kJQP7kiw5Fk" target="_blank">Video Five</a></li>
+  </ul>
+
+</body>
+</html>
