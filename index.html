@@ -106,31 +106,26 @@
       
   
 <style>
-  footer.u-footer {
-    width: 100%;
-    padding: 10px 0;               /* barra sottile */
-    min-height: auto;
-    background-color: #333;         /* grigio scuro */
-    text-align: center;
-    box-sizing: border-box;
-  }
+footer.u-footer {
+  background-color: #333 !important;  /* striscia grigia */
+  padding: 0 !important;              /* rimuove padding Nicepage */
+}
 
-  footer.u-footer .u-sheet {
-    display: flex;
-    align-items: center;       /* centrato verticalmente */
-    justify-content: center;   /* centrato orizzontalmente */
-    height: 40px;              /* altezza barra */
-    padding: 0;                /* rimuove padding interno */
-  }
-	
-  footer.u-footer p {
-    margin: 0;
-    color: #ffffff;/* testo bianco */
-    font-family: 'Lora', serif;
-    font-size: 0.9rem;
-  }
+footer.u-footer .u-sheet {
+  background: none !important;        /* rimuove eventuale sfondo bianco */
+  padding: 5px 0 !important;          /* spazio minimo sopra e sotto il testo */
+  margin: 0 !important;
+  text-align: center;
+}
+
+footer.u-footer p {
+  margin: 0 !important;
+  color: #ffffff !important;          /* testo bianco */
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  line-height: 1;                     /* rimuove eventuali spazi extra verticali */
+}
 </style>
-
 
 <style>
   .u-section-1 {
@@ -220,6 +215,7 @@
       </div></footer>
   
 </body></html>
+
 
 
 
