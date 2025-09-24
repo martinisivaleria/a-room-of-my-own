@@ -25,40 +25,11 @@
   margin: 22px auto 0;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* evita scroll orizzontale */
-  background-color: #333; /* così lo sfondo è uniforme */
-}
-
-.u-section-1 {
-  min-height: auto !important;
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
 
 .u-section-1 .u-list-1 {
   margin-top: 50px;
   margin-bottom: 0;
   width: 100%;        
-}
-
-.u-list-item {
-  height: auto !important;
-  min-height: auto !important;
-  aspect-ratio: 1 / 1; /* opzionale: tutte quadrate */
-}
-
-.u-repeater-1 {
-  min-height: auto !important;
-  height: auto !important;
-}
-
-footer.u-footer {
-  margin-top: 0 !important;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .u-section-1 .u-repeater-1 {
