@@ -31,10 +31,10 @@
 }
 
 .u-section-1 .u-repeater-1 {
-  display: grid; /* assicurati che sia una griglia */
-  grid-template-columns: repeat(4, 1fr); /* 4 colonne uguali */
-  gap: 20px; /* spazio tra le card */
-  min-height: auto; /* così si adatta al contenuto */
+  grid-template-columns: repeat(4, calc(25% - 10px));
+  min-height: 800px;
+  --gap: 20px;
+  grid-auto-columns: calc(25% - 10px);
 }
 
 .u-section-1 .u-image-1 {
