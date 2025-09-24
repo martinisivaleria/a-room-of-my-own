@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Photography</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #C59090;
+      color: #512222;
+      font-family: 'Lora', serif;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #512222;
+    }
+
+    p.description {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+      font-size: 1.1rem;
+      color: #512222;
+    }
+
+    /* Griglia delle foto */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Singolo blocco foto */
+    .photo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: auto;   /* mantiene il formato originale */
+      display: block;
+      object-fit: contain; /* non deforma mai */
+      border-radius: 0;    /* niente angoli arrotondati */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .photo-title {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      font-family: 'Lora', serif;
+      color: #512222;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Photography</h1>
+
+  <p class="description">
+    A selection of my photographs. Each picture carries its own story, and together they form a visual diary of moments I wanted to preserve.
+  </p>
+
+  <div class="gallery">
+    <div class="photo-item">
+      <img src="https://picsum.photos/600/400" alt="Photo 1">
+      <div class="photo-title">Photo 1</div>
+    </div>
+    <div class="photo-item">
+      <img src="https://picsum.photos/500/625" alt="Photo 2">
+      <div class="photo-title">Photo 2</div>
+    </div>
+    <div class="photo-item">
+      <img src="https://picsum.photos/500/500" alt="Photo 3">
+      <div class="photo-title">Photo 3</div>
+    </div>
+    <div class="photo-item">
+      <img src="https://picsum.photos/600/400" alt="Photo 4">
+      <div class="photo-title">Photo 4</div>
+    </div>
+  </div>
+
+</body>
+</html>
