@@ -38,6 +38,13 @@
   gap: 30px; /* più spazio tra card */
 }
 
+.u-section-1 .u-sheet-1 {
+  min-height: 100vh !important; /* 100% dell'altezza dello schermo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente il contenuto */
+}
+
 .u-section-1 .u-image-1 {
   transition-duration: 0.5s;
   --animation-custom_in-translate_x: 0px;
