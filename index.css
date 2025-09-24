@@ -31,12 +31,17 @@
   width: 100%;        
 }
 
+.u-list-item {
+  height: auto !important;
+  min-height: auto !important;
+  aspect-ratio: 1 / 1; /* opzionale: tutte quadrate */
+}
+
 .u-section-1 .u-repeater-1 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  min-height: auto;
-  margin-bottom: 0;
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonne su desktop */
+  gap: 30px; /* più spazio tra card */
+  min-height: auto !important;
 }
 
 .u-section-1 .u-image-1 {
