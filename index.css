@@ -36,7 +36,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 colonne su desktop */
   gap: 30px; /* più spazio tra card */
-  min-height: 500px !important;
+  min-height: auto !important;
 }
 
 .u-section-1 .u-image-1 {
