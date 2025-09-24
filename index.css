@@ -28,13 +28,14 @@
 .u-section-1 .u-list-1 {
   margin-top: 50px;
   margin-bottom: 0;
+  width: 100%;        
 }
 
 .u-section-1 .u-repeater-1 {
   grid-template-columns: repeat(4, 1fr);
   min-height: 800px;
   --gap: 20px;
-  grid-auto-columns: calc(25% - 10px);
+  grid-auto-columns: calc(25% - 15px);
 }
 
 .u-section-1 .u-image-1 {
