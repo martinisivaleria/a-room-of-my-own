@@ -32,10 +32,10 @@
 }
 
 .u-section-1 .u-repeater-1 {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
-  min-height: 800px;
-  --gap: 20px;
-  grid-auto-columns: calc(25% - 15px);
+  min-height: auto;
+  gap: 20px;
 }
 
 .u-section-1 .u-image-1 {
