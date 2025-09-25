@@ -12,52 +12,47 @@
       background-color: #000000;
       color: #FFFFFF;
       font-family: 'Lora', serif;
-      line-height: 1.6;
+      overflow: hidden; /* evita scrollbars */
+      height: 100vh;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
       text-align: center;
-      margin-top: 40px;
-      margin-bottom: 20px;
+      margin: 20px 0;
       color: #FFFFFF;
     }
 
     p.description {
       text-align: center;
       max-width: 700px;
-      margin: 0 auto 50px auto;
+      margin: 0 auto 20px auto;
       font-size: 1.1rem;
       color: #FFFFFF;
     }
 
-    /* Lista di link */
-    ul.video-list {
-      list-style: none;
-      padding: 0;
-      max-width: 700px;
-      margin: 0 auto;
+    .container {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 140px); /* spazio rimanente sotto al titolo e descrizione */
     }
 
-    ul.video-list li {
-      margin: 15px 0;
-      font-size: 1.1rem;
-    }
-
-    ul.video-list li a {
+    .song {
+      position: absolute;
       text-decoration: none;
-      color: #FFFFFF; /* colore del link */
-      background-color: rgba(81,34,34,0.7); /* rettangolo dietro link */
+      color: #FFFFFF;
+      background-color: rgba(81,34,34,0.7);
       padding: 8px 12px;
       border-radius: 8px;
-      display: inline-block;
+      font-size: 1rem;
+      white-space: nowrap;
       transition: background-color 0.3s, transform 0.2s;
     }
 
-    ul.video-list li a:hover {
+    .song:hover {
       background-color: rgba(81,34,34,0.9);
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -69,33 +64,43 @@
     Here’s a collection of some of my favorite songs from bands, musicals, and movies I’ve always loved. Click any link to watch on YouTube.
   </p>
 
-  <ul class="video-list">
-    <li><a href="https://www.youtube.com/watch?v=mGgMZpGYiy8" target="_blank">The Cure - Friday I'm In Love</a></li>
-    <li><a href="https://www.youtube.com/watch?v=9GkVhgIeGJQ" target="_blank">The Cure - Boys Don't Cry</a></li>
-    <li><a href="https://www.youtube.com/watch?v=-AUCSkHCrwY" target="_blank">The Cure - A Letter To Elise</a></li>
-    <li><a href="https://www.youtube.com/watch?v=TjPhzgxe3L0" target="_blank">The Smiths - Heaven Knows I'm Miserable Now</a></li>
-    <li><a href="https://www.youtube.com/watch?v=7QU1nvuxaMA" target="_blank">Audioslave - Like a Stone</a></li>
-    <li><a href="https://www.youtube.com/watch?v=AEB6ibtdPZc" target="_blank">Paramore: Hard Times</a></li>
-    <li><a href="https://www.youtube.com/watch?v=RvnkAtWcKYgA" target="_blank">Paramore: Decode</a></li>
-    <li><a href="https://www.youtube.com/watch?v=9BMwcO6_hyA" target="_blank">Bon Jovi - Always</a></li>
-    <li><a href="https://www.youtube.com/watch?v=_UwWYtLWEZg" target="_blank">Sleeping With Sirens - If You Can't Hang</a></li>
-    <li><a href="https://www.youtube.com/watch?v=jh5-KLvtcBw" target="_blank">Escape The Fate - Broken Heart</a></li>
-    <li><a href="https://www.youtube.com/watch?v=9sTQ0QdkN3Q" target="_blank">Bullet For My Valentine - Tears Don't Fall</a></li>
-    <li><a href="https://www.youtube.com/watch?v=iywaBOMvYLI" target="_blank">System Of A Down - Toxicity</a></li>
-    <li><a href="https://www.youtube.com/watch?v=L-iepu3EtyE" target="_blank">System Of A Down - Aerials</a></li>
-    <li><a href="https://www.youtube.com/watch?v=-w2m-TeLi6I" target="_blank">ELUVEITIE - The Call Of The Mountains</a></li>
-    <li><a href="https://www.youtube.com/watch?v=GHddJnNo_BQ" target="_blank">Abba - Angeleyes</a></li>
-    <li><a href="https://www.youtube.com/watch?v=WkL7Fkigfn8" target="_blank">ABBA - Does Your Mother Know</a></li>
-    <li><a href="https://www.youtube.com/watch?v=FKHMRGMkQHU" target="_blank">The Phantom Of The Opera</a></li>
-    <li><a href="https://www.youtube.com/watch?v=2oUal4fiEAM" target="_blank">To The Stars (Dragonheart/Soundtrack Version)</a></li>
-    <li><a href="https://www.youtube.com/watch?v=IpPIK4T068s" target="_blank">Test Drive (From How To Train Your Dragon Music From The Motion Picture)</a></li>
-    <li><a href="https://www.youtube.com/watch?v=pSQk-4fddDI" target="_blank">The Greatest Showman Cast - A Million Dreams</a></li>
-  </ul>
+  <div class="container">
+    <a href="https://www.youtube.com/watch?v=mGgMZpGYiy8" target="_blank" class="song">The Cure - Friday I'm In Love</a>
+    <a href="https://www.youtube.com/watch?v=9GkVhgIeGJQ" target="_blank" class="song">The Cure - Boys Don't Cry</a>
+    <a href="https://www.youtube.com/watch?v=-AUCSkHCrwY" target="_blank" class="song">The Cure - A Letter To Elise</a>
+    <a href="https://www.youtube.com/watch?v=TjPhzgxe3L0" target="_blank" class="song">The Smiths - Heaven Knows I'm Miserable Now</a>
+    <a href="https://www.youtube.com/watch?v=7QU1nvuxaMA" target="_blank" class="song">Audioslave - Like a Stone</a>
+    <a href="https://www.youtube.com/watch?v=AEB6ibtdPZc" target="_blank" class="song">Paramore: Hard Times</a>
+    <a href="https://www.youtube.com/watch?v=RvnkAtWcKYgA" target="_blank" class="song">Paramore: Decode</a>
+    <a href="https://www.youtube.com/watch?v=9BMwcO6_hyA" target="_blank" class="song">Bon Jovi - Always</a>
+    <a href="https://www.youtube.com/watch?v=_UwWYtLWEZg" target="_blank" class="song">Sleeping With Sirens - If You Can't Hang</a>
+    <a href="https://www.youtube.com/watch?v=jh5-KLvtcBw" target="_blank" class="song">Escape The Fate - Broken Heart</a>
+    <a href="https://www.youtube.com/watch?v=9sTQ0QdkN3Q" target="_blank" class="song">Bullet For My Valentine - Tears Don't Fall</a>
+    <a href="https://www.youtube.com/watch?v=iywaBOMvYLI" target="_blank" class="song">System Of A Down - Toxicity</a>
+    <a href="https://www.youtube.com/watch?v=L-iepu3EtyE" target="_blank" class="song">System Of A Down - Aerials</a>
+    <a href="https://www.youtube.com/watch?v=-w2m-TeLi6I" target="_blank" class="song">ELUVEITIE - The Call Of The Mountains</a>
+    <a href="https://www.youtube.com/watch?v=GHddJnNo_BQ" target="_blank" class="song">Abba - Angeleyes</a>
+    <a href="https://www.youtube.com/watch?v=WkL7Fkigfn8" target="_blank" class="song">ABBA - Does Your Mother Know</a>
+    <a href="https://www.youtube.com/watch?v=FKHMRGMkQHU" target="_blank" class="song">The Phantom Of The Opera</a>
+    <a href="https://www.youtube.com/watch?v=2oUal4fiEAM" target="_blank" class="song">To The Stars (Dragonheart/Soundtrack Version)</a>
+    <a href="https://www.youtube.com/watch?v=IpPIK4T068s" target="_blank" class="song">Test Drive (From How To Train Your Dragon)</a>
+    <a href="https://www.youtube.com/watch?v=pSQk-4fddDI" target="_blank" class="song">The Greatest Showman Cast - A Million Dreams</a>
+  </div>
+
+  <script>
+    // distribuzione casuale dei link
+    const container = document.querySelector('.container');
+    const songs = document.querySelectorAll('.song');
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+
+    songs.forEach(song => {
+      const x = Math.random() * (containerWidth - song.offsetWidth - 20);
+      const y = Math.random() * (containerHeight - song.offsetHeight - 20);
+      song.style.left = `${x}px`;
+      song.style.top = `${y}px`;
+    });
+  </script>
 
 </body>
 </html>
-
-
-
-
-
