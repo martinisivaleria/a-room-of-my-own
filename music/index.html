@@ -12,41 +12,45 @@
       background-color: #000000;
       color: #FFFFFF;
       font-family: 'Lora', serif;
-      overflow: hidden; /* evita scrollbars */
-      height: 100vh;
+      line-height: 1.6;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
       text-align: center;
-      margin: 20px 0;
+      margin-top: 30px;
+      margin-bottom: 15px;
       color: #FFFFFF;
     }
 
     p.description {
       text-align: center;
       max-width: 700px;
-      margin: 0 auto 20px auto;
+      margin: 0 auto 40px auto;
       font-size: 1.1rem;
       color: #FFFFFF;
     }
 
-    .container {
-      position: relative;
-      width: 100%;
-      height: calc(100vh - 140px); /* spazio rimanente sotto al titolo e descrizione */
+    /* Contenitore griglia */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .song {
-      position: absolute;
       text-decoration: none;
       color: #FFFFFF;
       background-color: rgba(81,34,34,0.7);
-      padding: 8px 12px;
+      padding: 10px 14px;
       border-radius: 8px;
       font-size: 1rem;
-      white-space: nowrap;
+      display: block;
+      text-align: center;
       transition: background-color 0.3s, transform 0.2s;
     }
 
@@ -64,7 +68,7 @@
     Here’s a collection of some of my favorite songs from bands, musicals, and movies I’ve always loved. Click any link to watch on YouTube.
   </p>
 
-  <div class="container">
+  <div class="grid">
     <a href="https://www.youtube.com/watch?v=mGgMZpGYiy8" target="_blank" class="song">The Cure - Friday I'm In Love</a>
     <a href="https://www.youtube.com/watch?v=9GkVhgIeGJQ" target="_blank" class="song">The Cure - Boys Don't Cry</a>
     <a href="https://www.youtube.com/watch?v=-AUCSkHCrwY" target="_blank" class="song">The Cure - A Letter To Elise</a>
@@ -86,21 +90,6 @@
     <a href="https://www.youtube.com/watch?v=IpPIK4T068s" target="_blank" class="song">Test Drive (From How To Train Your Dragon)</a>
     <a href="https://www.youtube.com/watch?v=pSQk-4fddDI" target="_blank" class="song">The Greatest Showman Cast - A Million Dreams</a>
   </div>
-
-  <script>
-    // distribuzione casuale dei link
-    const container = document.querySelector('.container');
-    const songs = document.querySelectorAll('.song');
-    const containerWidth = container.clientWidth;
-    const containerHeight = container.clientHeight;
-
-    songs.forEach(song => {
-      const x = Math.random() * (containerWidth - song.offsetWidth - 20);
-      const y = Math.random() * (containerHeight - song.offsetHeight - 20);
-      song.style.left = `${x}px`;
-      song.style.top = `${y}px`;
-    });
-  </script>
 
 </body>
 </html>
