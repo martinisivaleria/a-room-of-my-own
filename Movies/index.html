@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Books</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #C59090; /* sfondo */
+      color: #512222;
+      font-family: 'Lora', serif;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #512222;
+    }
+
+    p.description {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+      font-size: 1.1rem;
+      color: #512222;
+    }
+
+    /* Container griglia */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Singola card */
+    .card {
+      position: relative;
+      width: 220px;
+      height: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    /* Titolo visibile */
+    .card-title {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(81,34,34,0.7); /* riprende il #512222 */
+      padding: 6px 20px;
+      border-radius: 10px;
+      min-width: 165px; /* il riquadro sarà almeno 180px largo */
+      width: auto;      /* si allarga in base al contenuto */
+      text-align: center; /* centra il testo all’interno */
+    }
+
+    /* Overlay nascosto */
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(81,34,34,0.9); /* overlay con colore principale */
+      color: #fff;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .card:hover .card-overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Books</h1>
+
+  <p class="description">
+    Here’s a list of some of the books I’ve read over the past few years. For my favorites, I’ve also added a brief comment.  
+    If you love reading and would like to discuss what you’ve read, feel free to reach out to me.  
+    I always enjoy sharing thoughts and exchanging opinions about literature.
+  </p>
+
+  <div class="cards">
+    <!-- Card 1 senza commento -->
+    <div class="card" style="background-image: url('immagini/austen.png');">
+      <div class="card-title">Pride and Prejudice - Jane Austen</div>
+      <div class="card-overlay"></div>
+    </div>
+
+    <!-- Card 2 con commento -->
+    <div class="card" style="background-image: url('immagini/austen.png');">
+      <div class="card-title">Emma - Jane Austen</div>
+      <div class="card-overlay">I see a part of Emma reflected in me—her vanity and her flaws, yet also the warmth of her heart. She remains one of my favourite characters of all time.</div>
+    </div>
+
+    <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/charlotte_bronte.jpg');">
+      <div class="card-title">Jane Eyre - Charlotte Brontë</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/austen.png');">
+      <div class="card-title">Northanger Abbey - Jane Austen</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/austen.png');">
+      <div class="card-title">Mansfield Park - Jane Austen</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/austen.png');">
+      <div class="card-title">Sense and Sensibility - Jane Austen</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/austen.png');">
+      <div class="card-title">Persuasion - Jane Austen</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/austen.png');">
+      <div class="card-title">Lady Susan, The Watsons, Sanditon - Jane Austen</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/woolf.png');">
+      <div class="card-title">A room of one's own - Virginia Woolf</div>
+      <div class="card-overlay">This book opened my mind like no other, and I always recommend it to anyone who enjoys a good essay. It even inspired the title of this website.</div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/woolf.png');">
+      <div class="card-title">Mrs Dalloway - Virginia Woolf</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/plath.png');">
+      <div class="card-title">The Bell Jar - Sylvia Plath</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/salinger.jpeg');">
+      <div class="card-title">The Catcher in the Rye (Il giovane Holden) - J.D. Salinger</div>
+      <div class="card-overlay">Sometimes I think I could write something like this. You can easily share the protagonist's point of view.</div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/golding.jpg');">
+      <div class="card-title">Lord of the Flies - William Golding</div>
+      <div class="card-overlay">A very disturbing book.</div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/flaubert.png');">
+      <div class="card-title">Madame Bovary - Gustave Flaubert</div>
+      <div class="card-overlay">It gave me the impression that the writer wasn’t very familiar with women.</div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/alcott.png');">
+      <div class="card-title">Little Woman, Good Wives - Louisa May Alcott</div>
+      <div class="card-overlay">Jo March is my everyday inspiration.</div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/hardy.jpg');">
+      <div class="card-title">The Woodlanders - Thomas Hardy</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/wharton.png');">
+      <div class="card-title">Summer - Edith Wharton</div>
+      <div class="card-overlay">Very interesting for anyone who wants to understand more about the condition of women during that time.</div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/emily_bronte.jpg');">
+      <div class="card-title">Wuthering Heights - Emily Brontë</div>
+      <div class="card-overlay">How is it possible to both love and hate a character?</div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/shelley.jpg');">
+      <div class="card-title">Frankenstein - Mary Shelley</div>
+      <div class="card-overlay">Saddest book of all time.</div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/wilde.png');">
+      <div class="card-title">The Picture of Dorian Gray - Oscar Wilde</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/orwell.jpg');">
+      <div class="card-title">1984 - George Orwell</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <!-- Card 3 con commento -->
+    <div class="card" style="background-image: url('immagini/hemingway.jpg');">
+      <div class="card-title">A Farewell to Arms - Ernest Hemingway</div>
+      <div class="card-overlay">This book made me cry a river of tears.</div>
+    </div>
+
+     <div class="card" style="background-image: url('immagini/hemingway.jpg');">
+      <div class="card-title">Fiesta: The Sun Also Rises - Ernest Hemingway</div>
+      <div class="card-overlay">Sometimes I wish I could live like Hemingway.</div>
+    </div>
+
+     <div class="card" style="background-image: url('immagini/hemingway.jpg');">
+      <div class="card-title">The Old Man and the Sea - Ernest Hemingway</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <div class="card" style="background-image: url('immagini/fanu.jpeg');">
+      <div class="card-title">Carmilla - J. Sheridan Le Fanu</div>
+      <div class="card-overlay">The scariest book I’ve ever read.</div>
+    </div>
+
+     <div class="card" style="background-image: url('immagini/stoker.png');">
+      <div class="card-title">The Lady of the Shroud - Bram Stoker</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <div class="card" style="background-image: url('immagini/carroll.jpg');">
+      <div class="card-title">Alice in Wonderland - Lewis Carroll</div>
+      <div class="card-overlay"></div>
+    </div>
+
+    <div class="card" style="background-image: url('immagini/shakespeare.png');">
+      <div class="card-title">Romeo and Juliet - William Shakespeare</div>
+      <div class="card-overlay"></div>
+    </div>
+
+    <div class="card" style="background-image: url('immagini/shakespeare.png');">
+      <div class="card-title">Machbeth - William Shakespeare</div>
+      <div class="card-overlay"></div>
+    </div>
+
+    <div class="card" style="background-image: url('immagini/maupassant.jpg');">
+      <div class="card-title">Bel-Ami - Guy de Maupassant</div>
+      <div class="card-overlay">Bel-Ami is everything I hate.</div>
+    </div>
+
+     <div class="card" style="background-image: url('immagini/dostoevskij.jpg');">
+      <div class="card-title">Notes from Underground - Fëdor Dostoevskij</div>
+      <div class="card-overlay"></div>
+    </div>
+
+    <div class="card" style="background-image: url('immagini/murakami.png');">
+      <div class="card-title">Hard-Boiled Wonderland and the End of the World - Haruki Murakami</div>
+      <div class="card-overlay"></div>
+    </div>
+
+     <div class="card" style="background-image: url('immagini/paolini.png');">
+      <div class="card-title">The Eragon Saga - Christopher Paolini</div>
+      <div class="card-overlay">The books that made me dream in high school.</div>
+    </div>
+
+    <div class="card" style="background-image: url('immagini/clare.jpg');">
+      <div class="card-title">The Shadowhunter Chronicles - Cassandra Clare</div>
+      <div class="card-overlay">My guilty pleasure.</div>
+    </div>
+    
+  </div>
+
+</body>
+</html>
